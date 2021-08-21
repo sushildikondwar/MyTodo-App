@@ -1,0 +1,440 @@
+ 
+body {
+    height: 100vh;
+    width: 100%;
+    min-width: 320px;
+    max-width: 580px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    position: relative;
+    background-color: rgb(239, 255, 170);
+    border-right: black solid 2px;
+}
+
+.menu-button {
+    margin-top: 6%;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.menu-hamburger {
+    padding: 3px;
+    margin-left: 16%;
+    height: 25px;
+    width: 30px;
+    border: none;
+    outline: none;
+}
+
+.side-nav {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(247, 255, 170);
+    overflow-x: hidden;
+    border-right: black solid 2px;
+    border-radius: 3%;
+    transition: 500ms;
+}
+
+#nav-close-btn {
+    margin: 0;
+    margin-top: 12%;
+    padding: 0;
+    right: 0px;
+    display: block;
+    margin-right: 9%;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.nav-close {
+    display: block;
+    height: 35px;
+    width: 35px;
+}
+
+.nav-container {
+    margin-top: 37%;
+    padding-top: 10%;
+    display: block;
+    border-top: 2px dashed black;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+
+.nav-container-item {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 7%;
+    position: relative;
+    font-size: 1.3em;
+    transition: 100ms;
+}
+
+.u-line {
+    margin-top: -3%;
+    padding: 0;
+    height: 1px;
+    width: 100%;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
+    transition: 0.1s;
+}
+
+.nav-container-item:active ~ .u-line {
+    width: 0;
+    cursor: pointer;
+}
+
+.header {
+    margin-top: -8%;
+    display: block;
+    position: relative;
+    font-size: 2em;
+    text-align: center;
+    z-index: -1;
+}
+
+li{
+    margin: 0;
+    padding: 0;
+    margin-left: -4%;
+    font-size: 119%;
+    right: 10%;
+    white-space: nowrap;
+}
+
+input[type=checkbox] {
+    padding: 0;
+    padding-right: 6%;
+    margin-top: 1%;
+    margin: 3%;
+    margin-left: 2%;
+    margin-right: 4%;
+    height: 1.7em;
+    width: 1.7em;
+    display: inline-block;
+    border: 3px black solid;
+}
+
+.input-div {
+    position: absolute;
+    bottom: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+input[type=text] {
+    margin: 5px;
+    padding: 10px;
+    width: 95%;
+    box-sizing: border-box;
+    transition: 200ms;
+    background-color: rgb(239, 255, 170);
+    border: 2px solid rgb(224, 146, 146);
+    border-style: groove;
+    outline: none;
+}
+input[type=text]:focus {
+    border: 3px solid black;
+    background-color: rgb(240, 255, 109);
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.my-day-section {
+    margin: 0;
+    padding: 0;
+    display: block;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.task-section {
+    margin: 0;
+    padding: 0;
+    display: none;
+    transition: 0.5s;
+}
+
+.myday-task-container-section {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 74vh;
+    text-align: justify;
+    align-items: inherit;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#task-input-box {
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 4px 8px 8px rgb(97, 64, 62);
+}
+
+.container-item-title {
+    margin: 0;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    display: inline-block;
+    font-size: 100%;
+    font-style: oblique;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.unchecked-item-count {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    bottom: 27%;
+    font-size: 90%;
+}
+
+.new-day-image-div {
+    margin: 0;
+    margin-top: 15%;
+    margin-right: 10%;
+    padding: 0;
+    width: 100%;
+}
+
+.new-day-image {
+    margin: 0;
+    margin-top: 0;
+    margin-right: 10%;
+    padding: 0;
+    display: block;
+    align-items: center;
+}
+
+.new-day-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    margin-right: 23%;
+    padding: 0;
+    display: block;
+    height: 50%;
+    width: 50%;
+    opacity: 0.3;
+}
+
+.mydaytextspan {
+    margin: auto;
+    display: inline-block;
+    width: 70%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.task-delete {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    background-color: rgb(239, 255, 170);
+    border: none;
+    outline: none;
+    margin-top: -2%;
+    margin-left: 20px;
+    font-size: 70%;
+}
+
+.delete-logo-img {
+    margin: 0;
+    margin-bottom: -5px;
+    display: block;
+    padding: 0;
+    height: 27px;
+    border: none;
+    outline: none;
+    background-color: rgb(239, 255, 170);
+}
+
+.delete-logo-inverted-img {
+    margin: 0;
+    margin-bottom: -5px;
+    padding: 0;
+    height: 27px;
+    display: block;
+    border: none;
+    outline: none;
+    background-color: black;
+}
+
+#task-container {
+    margin: 0;
+    margin-top: 3%;
+    padding: 0;
+    display: block;
+    height: 85vh;
+    text-align: justify;
+    border-top: rgb(119, 119, 17) 1px solid;
+    border-radius: 5%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.newtaskdaydiv > h3 {
+    margin: 3%;
+    margin-top: 4%;
+    margin-left: 3%;
+    font-size: 120%;
+}
+
+.datelinearspan {
+    margin-left: 1%;
+    color: rgb(194, 194, 88);
+}
+
+.newtaskelement {
+    letter-spacing: 0.5px;
+}
+
+.newtaskelement > input {
+    margin-left: 6%;
+    margin-bottom: 3%;
+}
+
+.newtaskelement > span {
+    display: inline-block;
+    width: 65%;
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+
+.newtaskelement > button {
+    margin: auto;
+    margin-left: 3%;
+}
+
+.divborderbottomline {
+    height: 1px;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
+}
+
+.selectdate {
+    margin: 0;
+    padding: 0;
+    margin-top: -20px;
+    margin-left: 70%;
+    display: block;
+    z-index: 1;
+}
+
+.nav-container-button {
+    margin-top: 35%;
+    margin-bottom: -85%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#dark-mode-button {
+    padding: 3.5% 7%;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    font-size: 88%;
+    font-weight: bold;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 16px;
+    box-shadow: 2px 4px 4px rgb(97, 64, 62);
+    outline: none;
+}
+
+#nav-end-title {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    /* text-align: center; */
+    position: fixed;  
+    bottom: 5px;  
+}
+
+@media only screen and (min-width: 320px) {
+    .mydaytextspan {
+        width: 67%;
+    }
+}
+
+@media only screen and (min-width: 352px) {
+    .mydaytextspan {
+        width: 70%;
+    }
+}
+
+
+@media only screen and (min-width: 422px) {
+    .mydaytextspan {
+        width: 72%;
+    }
+    .delete-logo-img {
+        margin-bottom: -7px;
+    }
+    .delete-logo-inverted-img {
+        margin-bottom: -7px;
+    }
+}
+
+@media only screen and (min-width: 452px) {
+    .mydaytextspan {
+        width: 73%;
+    }
+    .delete-logo-img {
+        margin-bottom: -9px;
+    }
+    .delete-logo-inverted-img {
+        margin-bottom: -9px;
+    }
+}
+
+@media only screen and (min-width: 496px) {
+    .mydaytextspan {
+        width: 75%;
+    }
+    .delete-logo-img {
+        margin-bottom: -9px;
+    }
+    .delete-logo-inverted-img {
+        margin-bottom: -9px;
+    }
+}
+
+@media only screen and (min-width: 546px) {
+    .mydaytextspan {
+        width: 76%;
+    }
+    .delete-logo-img {
+        margin-bottom: -10px;
+    }
+    .delete-logo-inverted-img {
+        margin-bottom: -10px;
+    }
+}

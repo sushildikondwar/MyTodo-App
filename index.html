@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+
+<body id="body">
+    <script src="js/index.js"></script>
+    <div class="container">
+        <div class="side-nav" id="nav-bar">
+            <button id='nav-close-btn'><img class="nav-close" src="img/nav-off.png" alt="Close"></button>
+            <div class="nav-container" id="sushildi">
+                <div class="nav-container-item" onclick="showmyday()"><div class="container-item-title">My Day</div><div class="unchecked-item-count" id="day_unchecked"></div></div>
+                <div class="u-line"></div>
+                <div class="nav-container-item" onclick="showmytask()"><div class="container-item-title">Tasks</div><div class="unchecked-item-count" id="task_unchecked"></div></div>
+                <div class="u-line"></div>
+                <div class="nav-container-button">
+                    <button id="dark-mode-button" onclick="toggledarkmode(localStorage.getItem('dark-mode'))">Dark Mode : off</button>
+                </div>
+                <div class="myfeatures" style="width: 100%; display: block; margin-top: 175%; text-align: center;">
+                    <a href="app_features.html"><b>*Help & Features*</b></a>
+                </div>
+                <div class="nav-container-item" id="nav-end-title">
+                    <h6 style="font-style:italic; margin-bottom: -12%;" id="creation">Developed by :</h6>
+                    <h6 style="margin-top:24px;">Sushil G Dikondwar</h6>
+                </div>
+            </div>
+        </div>
+        <div class="my-day-section">
+            <button class="menu-button" id="nav-button"><img class="menu-hamburger" src="img/menu-open.png" alt="Menu"></button>
+            <h1 class='header'>*My Day*<span style="margin: 0; padding: 0; display: block; font-size: 15px;" id="datetime"></span></h1>
+            <div class="new-day-image-div" style="display: none;"><img class="new-day-img" src="img/new-day.png"><img class="new-day-img" src="img/new-day-inverted.png"><h1 id="watermark-header" style="font-style:italic; opacity: 0.3;margin-top: 10%; margin-left: auto; margin-left: -5%; margin-right: auto; text-align: center;">Add New Task</h1></div>
+            <div class="myday-task-container-section">
+                <ul id="myday-container" style="list-style-type:none"></ul>
+            </div>
+            <div class="input-div">
+                <form id='form'>
+                    <input type="text" autocomplete="off" placeholder="Ex: Buy a Book*" id="task-input-box">
+                </form>
+            </div>
+        </div>
+        <div class="task-section">
+            <button class="menu-button" id="nav-button1"><img class="menu-hamburger" src="img/menu-open.png" alt="Menu"></button>
+            <h1 class='header'>*Tasks*</h1>
+            <div class="selectdate">
+                <select name="" id="selectdate">
+                    <option>--Date--</option>
+                </select></div>
+            <div id="task-container"></div>
+        </div>    
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+<script>
+    var dt = new Date();
+    const weekdays = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    if (dt.getDay() == 3){
+        document.getElementById('datetime').style.left = '6%';
+    }
+    else {
+        document.getElementById('datetime').style.left = '12%';
+    }
+    document.getElementById("datetime").innerHTML = weekdays[dt.getDay()] + ', ' + dt.getDate() + ' ' + months[dt.getMonth()];
+</script>
+
+</html>
